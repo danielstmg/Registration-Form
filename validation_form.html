@@ -1,0 +1,88 @@
+<!-- Nama Kelompok:
+    1. Yoseph Hatigoran Simanjuntak 24060120140165
+    2. Mellia Arya Firanur Sukma 24060118120003
+    3. Daniel Sahat Parulian Situmeang 24060120140051 
+    4. Hikmal Arkan Nur Zaidan 24060120130039
+ -->
+
+<!DOCTYPE html>
+<html>
+	<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+	<head>
+		<title>Form Validation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-1width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+    <body>
+      <h1>Registrasi Olimpiade Akuatik</h1>
+      <table border="0" width="400">
+        <tr><td>Nama</td>
+               <td>:</td>
+               <td><input type="text" size="30" placeholder="..." id="nama"></td>
+        </tr>
+        <tr><td>NIK</td>
+            <td>:</td>
+            <td><input type="text" size="30" placeholder="..." id="nik"></td>
+        <tr><td>Email</td>
+               <td>:</td>
+               <td><input type="email" size="30" placeholder="..." id="email"></td>
+        </tr>
+        <tr><td>Nomor Telepon</td>
+          <td>:</td>
+          <td><input type="text" size="30" placeholder="..." id="nomor"></td>
+        </tr>
+        <tr><td>Jenis Kelamin</td>
+            <td>:</td>
+             <td><select id="kelamin">
+              <option value="0">Pilihan</option>
+               <option value="1">Laki-laki</option>
+               <option value="2">Perempuan</option>
+                </select></td>
+          </tr>
+        <tr><td>Jenis Akuatik</td>
+          <td>:</td>
+           <td><select id="akuatik">
+            <option value="0">Pilihan</option>
+             <option value="1">Renang</option>
+             <option value="2">Renang Indah</option>
+             <option value="3">Renang Maraton</option>
+             <option value="4">Loncat Indah</option>
+             <option value="5">Polo Air</option>
+              </select></td>
+        </tr>
+        <tr><td>Alasan Mendaftar Olimpiade</td>
+            <td>:</td>
+            <td><input type="text" size="30" placeholder="..." id="alasan"></td>
+        </tr>
+      </table>
+      <button type="button" onclick="validateForm()">Submit</button>
+      <h1 id="hasil"></h1>
+    </body>
+    <script>
+      function validateForm() {
+        var nama = document.getElementById("nama").value;
+            var nik = document.getElementById("nik").value;
+            var email = document.getElementById("email").value;
+		    var nomor = document.getElementById("nomor").value;
+        var kelamin = document.getElementById("kelamin").value;
+        var akuatik = document.getElementById("akuatik").value;
+        var alasan = document.getElementById("alasan").value;
+		    if (nama != "" && nik!="0" && email !="" && nomor !="0" && kelamin !="" && akuatik !="" && alasan !="") {
+			    document.getElementById("hasil").innerHTML = "Data Berhasil Disimpan";
+          return true;
+		    }
+        else{
+			    alert('Data yang Anda Masukkan Kurang Lengkap !');
+		    }
+      }
+    </script>
+				</div>
+			</section>
+    
+	
+	<!-- Scripts -->
+			<script src="assets/js/main.js"></script>
+</html>
